@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta charset="UTF-8">
     <style>
         .center { 
             text-align: center;
@@ -25,20 +26,166 @@
         body {
             background-color:#00bfff;
         }
-        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css)
+        .square{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .square {
+            display:flex;
+        }
+        .voice{
+            display: inline-block;
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            background:#DB4455;
+        }
+        .technic{
+            display: inline-block;
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            background:#3168dd;
+        }
+        .mental{
+            display: inline-block;
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            background:#5edf94;
+        }
+        .charisma{
+            display: inline-block;
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            background:#ffbc3d;
+        }
+        .inline{
+            display: inline;
+        }
+        .box{
+            display: inline-block;
+            width:130px;
+        }
     </style>
     <title>CUE!</title>
+    <script language = "javascript">
+    window.onload = function() {
+        document.getElementById('button').onclick = function() {
+            this.style.color = 'red';
+        }
+    };
+    function radioTest() {
+        var radioCheck = document.getElementById("radioVoice");
+        var radioCheckMental = document.getElementById("radioMental");
+        var voiceImg = document.getElementById("voiceImg");
+        var mentalImg = document.getElementById("voiceMental");
+        if(radioCheck == true) {
+            voiceImg.src = "technic.png";
+            alert("hi");
+        }else{
+            voiceImg.src = "voice.png";
+        }
+        if(radioCheckMental == true){
+            mentalImg = "charisma.png";
+        }else{
+            mentalImg = "mental.png"
+        }
+    }
+    function changeBackground(color){
+        document.body.style.backgroundColor = color;
+    }
+    function changeCut1(color){
+        document.getElementById("cut1").src=color+".png"
+    }
+    function changeCut2(color){
+        document.getElementById("cut2").src=color+".png"
+    }
+    function changeCut3(color){
+        document.getElementById("cut3").src=color+".png"
+    }
+    </script>
 </head>
 <body style = "font-family :nanumgothic " class="center">
     <div>
+        <input type="radio" name="cut1" value="voice" onclick="changeCut1(this.value)" checked>voice
+        <input type="radio" name="cut1" value="technic" onclick="changeCut1(this.value)">technic
+        <input type="radio" name="cut1" value="mental" onclick="changeCut1(this.value)">mental
+        <input type="radio" name="cut1" value="charisma" onclick="changeCut1(this.value)">charisma
+    </div>
+    <div>
+        <input type="radio" name="cut2" value="voice" onclick="changeCut2(this.value)" checked>voice
+        <input type="radio" name="cut2" value="technic" onclick="changeCut2(this.value)">technic
+        <input type="radio" name="cut2" value="mental" onclick="changeCut2(this.value)">mental
+        <input type="radio" name="cut2" value="charisma" onclick="changeCut2(this.value)">charisma
+    </div>
+    <div>
+        <input type="radio" name="cut3" value="voice" onclick="changeCut3(this.value)" checked>voice
+        <input type="radio" name="cut3" value="technic" onclick="changeCut3(this.value)">technic
+        <input type="radio" name="cut3" value="mental" onclick="changeCut3(this.value)">mental
+        <input type="radio" name="cut3" value="charisma" onclick="changeCut3(this.value)">charisma
+    </div>
+    <div class="box">
+        <h1 class="inline" id="button">cut1</h1>
+        <img id="cut1" src="voice.png"/>
+    </div>
+    <div class="box">
+        <h1 class="inline" id="button">cut2</h1>
+        <img id="cut2" src="voice.png"/>
+    </div>
+    <div class="box">
+        <h1 class="inline" id="button">cut3</h1>
+        <img id="cut3" src="voice.png"/>
+    </div>
+
+    <div>
+        <div class="voice" id="button"></div>
+        <div class="technic"></div>
+        <div class="mental"></div>
+        <div class="charisma"></div>
+    </div>
+    <div>
+        cut2
+        <div class="voice"></div>
+        <div class="technic"></div>
+        <div class="mental"></div>
+        <div class="charisma"></div>
+    </div>
+    <div>
+        cut3
+        <div class="voice"></div>
+        <div class="technic"></div>
+        <div class="mental"></div>
+        <div class="charisma"></div>
+    </div>
+    <input type="radio" name="cut1color" id="radioVoice" onclick="radioTest();"/>
+    <label for="radioVoice">
+        <img id="voiceImg" src="voice.png">
+    </label>
+    <input type="radio" name="cut1color" id="radioMental" onclick="radioTest();"/>
+    <label for="radioMental">
+        <img id="mentalImg" src="mental.png">
+    </label>
+    <input type="radio" name="cut1color" value="red">노란색<br>
+    <input type="radio" name="cut1color" value="red">노란색<br>
+    <input type="radio" name="cut1color" value="red">노란색<br>
+    <div>
+        배경색 바꾸기
+        <input type="radio" name="cut2color" value="red" onclick="changeBackground(this.value)">빨간색<br>
+        <input type="radio" name="cut2color" value="yellow" onclick="changeBackground(this.value)">노란색<br>
+        <input type="radio" name="cut2color" value="red" onclick="changeBackground(this.value)">노란색<br>
+        <input type="radio" name="cut2color" value="red" onclick="changeBackground(this.value)">노란색<br>
+    </div>
+    <!-- 잠시 지우기
+    <div>
         <div class="paragraph" >
-            test
         </div>
         <form>
             로그인 : <input type='text'>
             패스워드 : <input type='password'>
             <input type='submit' value='완료'>
         </form>
-    </div>
+    </div>-->
 </body>
 </html>
