@@ -60,7 +60,24 @@ body {
 .inline{
     display: inline;
 }
+.cards{
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+}
+.margin_10{
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    margin:10px;
+}
 .box{
     display: inline-block;
-    width:130px;
+    padding:1%;
+}
+.vertical-middle{
+    vertical-align: top;
+}
+.block {
+    display:block;
 }
