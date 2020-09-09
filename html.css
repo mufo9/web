@@ -1,0 +1,66 @@
+
+.center { 
+    text-align: center;
+}
+.paragraph {
+    vertical-align:text-top;
+    padding : 1% 1% 2% 1%;
+    width : 300px;
+    max-width :100%;
+    height : 270px;
+    display :inline-block;
+    border:1px solid #FFEBF0;
+}
+.left {
+    text-align: left;
+}
+.image {
+    vertical-align:center;
+    text-align: center;
+    height:90px;
+}
+body {
+    background-color:#00bfff;
+}
+.square{
+    display: flex;
+    flex-wrap: wrap;
+}
+.square {
+    display:flex;
+}
+.voice{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#DB4455;
+}
+.technic{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#3168dd;
+}
+.mental{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#5edf94;
+}
+.charisma{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background:#ffbc3d;
+}
+.inline{
+    display: inline;
+}
+.box{
+    display: inline-block;
+    width:130px;
+}
