@@ -24,10 +24,10 @@ function changeBackground(color){
     document.body.style.backgroundColor = color;
 }
 function changeCut1(color){
-    document.getElementById("/cut1").src=color+".png"
+    document.getElementById("cut1").src=color+".png"
 }
 function changeCut2(color){
-    document.getElementById("\cut2").src=color+".png"
+    document.getElementById("cut2").src=color+".png"
 }
 function changeCut3(color){
     document.getElementById("cut3").src=color+".png"
