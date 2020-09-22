@@ -20,7 +20,8 @@
     height:90px;
 }
 body {
-    background-color:#00bfff;
+    background-color: white;
+    /*    background-color:#00bfff; */
 }
 .square{
     display: flex;
@@ -90,5 +91,5 @@ body {
     display:block;
 }
 .input_text{
-    width: 90%;
+    width: 40px;
 }

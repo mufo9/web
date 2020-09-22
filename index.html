@@ -10,6 +10,69 @@
     </script>
 </head>
 <body style = "font-family :nanumgothic " class="center">
+    코드입력
+    <input type="text" id="code" size="20">
+    <button onclick="load()">불러오기</button>
+    <button onclick="debug()">디버그</button>
+    <button onclick="copy()">복사</button>
+    <button onclick="run()">실행</button>
+    <table border="1">
+        <th></th>
+        <th>cut1</th>
+        <th>cut2</th>
+        <th>cut3</th>
+        <th>skill1</th>
+        <th>skill2</th>
+        <th>skill3</th>
+        <th>skill4</th>
+        <tr><!-- 첫번째 줄 시작 -->
+            <td>card 1</td>
+            <td><input class="input_text" id="1-1" type="text" size="3"></td>
+            <td><input class="input_text" id="1-2" type="text" size="3"></td>
+            <td><input class="input_text" id="1-3" type="text" size="3"></td>
+            <td><input class="input_text" type="text" size="3"></td>
+            <td>
+                <select name="num">
+                    <option value="">선택</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        </tr><!-- 첫번째 줄 끝 -->
+        <tr><!-- 두번째 줄 시작 -->
+            <td>card 2</td>
+            <td><input class="input_text" id="2-1" type="text" size="3"></td>
+            <td><input class="input_text" id="2-2" type="text" size="3"></td>
+            <td><input class="input_text" id="2-3" type="text" size="3"></td>
+            <td><input class="input_text" type="text" size="3"></td>
+        </tr><!-- 두번째 줄 끝 -->
+        <tr><!-- 두번째 줄 시작 -->
+            <td>card 3</td>
+            <td><input class="input_text" id="3-1" type="text" size="3"></td>
+            <td><input class="input_text" id="3-2" type="text" size="3"></td>
+            <td><input class="input_text" id="3-3" type="text" size="3"></td>
+            <td><input class="input_text" type="text" size="3"></td>
+        </tr><!-- 두번째 줄 끝 -->
+        <tr>
+            <td>card 4</td>
+            <td><input class="input_text" id="4-1" type="text" size="3"></td>
+            <td><input class="input_text" id="4-2" type="text" size="3"></td>
+            <td><input class="input_text" id="4-3" type="text" size="3"></td>
+            <td><input class="input_text" type="text" size="3"></td>
+        </tr>
+        <tr>
+            <td>card 5</td>
+            <td><input class="input_text" id="5-1" type="text" size="3"></td>
+            <td><input class="input_text" id="5-2" type="text" size="3"></td>
+            <td><input class="input_text" id="5-3" type="text" size="3"></td>
+            <td><input class="input_text" type="text" size="3"></td>
+        </tr>
+        </table>
+        <div>cut1 :</div>
+        <div>cut2 :</div>
+        <div>cut3 :</div>
     <div class="content">
         <div>
             <input type="radio" name="cut1" value="voice" onclick="changeCut1(this.value)" checked>voice
@@ -50,14 +113,6 @@
     </div>
     <div class="content">
         <div class="cards">
-            cards<br>
-            voice<br>
-            technic<br>
-            mental<br>
-            charisma<br>
-            적성<br>
-        </div>
-        <div class="cards">
             card 1<br>
             <input class="input_text" type="text" size="3"><br>
             <input class="input_text" type="text" size="3"><br>
@@ -86,55 +141,5 @@
             <input class="input_text" type="text" size="3"><br>
         </div>
     </div>
-    <div class="content">
-        <div>
-            <div class="voice" id="button"></div>
-            <div class="technic"></div>
-            <div class="mental"></div>
-            <div class="charisma"></div>
-        </div>
-        <div>
-            cut2
-            <div class="voice"></div>
-            <div class="technic"></div>
-            <div class="mental"></div>
-            <div class="charisma"></div>
-        </div>
-        <div>
-            cut3
-            <div class="voice"></div>
-            <div class="technic"></div>
-            <div class="mental"></div>
-            <div class="charisma"></div>
-        </div>
-        <input type="radio" name="cut1color" id="radioVoice" onclick="radioTest();"/>
-        <label for="radioVoice">
-            <img id="voiceImg" src="voice.png">
-        </label>
-        <input type="radio" name="cut1color" id="radioMental" onclick="radioTest();"/>
-        <label for="radioMental">
-            <img id="mentalImg" src="mental.png">
-        </label>
-        <input type="radio" name="cut1color" value="red">노란색<br>
-        <input type="radio" name="cut1color" value="red">노란색<br>
-        <input type="radio" name="cut1color" value="red">노란색<br>
-        <div>
-            배경색 바꾸기
-            <input type="radio" name="cut2color" value="red" onclick="changeBackground(this.value)">빨간색<br>
-            <input type="radio" name="cut2color" value="yellow" onclick="changeBackground(this.value)">노란색<br>
-            <input type="radio" name="cut2color" value="red" onclick="changeBackground(this.value)">노란색<br>
-            <input type="radio" name="cut2color" value="red" onclick="changeBackground(this.value)">노란색<br>
-        </div>
-    </div>
-    <!-- 잠시 지우기
-    <div>
-        <div class="paragraph" >
-        </div>
-        <form>
-            로그인 : <input type='text'>
-            패스워드 : <input type='password'>
-            <input type='submit' value='완료'>
-        </form>
-    </div>-->
 </body>
 </html>
